@@ -41,7 +41,6 @@ self.addEventListener('install',function(event){
 		    '/css/',
 		    '/css/styles.css',
 		    'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
-		    'https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js',
 		    'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
 		    'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
 		    'https://unpkg.com/leaflet@1.3.1/dist/images/marker-icon.png'
