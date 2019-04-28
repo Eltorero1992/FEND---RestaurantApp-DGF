@@ -273,3 +273,21 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== A11y Features ====================== */
+
+
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: white;
+  color: blue;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+

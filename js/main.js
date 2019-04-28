@@ -7,6 +7,7 @@ var markers = []
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
+
 document.addEventListener('DOMContentLoaded', (event) => {
 
   initMap(); // added
@@ -77,7 +78,7 @@ initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiZWx0b3Jlcm8xOTkyIiwiYSI6ImNqdWt4cTl6cjA5MnQ0NG1xMWY1M3cyNWwifQ.HzXyovIqpjfdh2oavPbDRg',
@@ -152,6 +153,21 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     ul.append(createRestaurantHTML(restaurant));
   });
+
+/**
+* Accesibility - Displays number of restaurants found based on filters
+*/
+
+
+  if (document.querySelector("#restaurants-list").childElementCount === 1) {
+
+    document.querySelector("#restaurantFound").innerHTML = document.querySelector("#restaurants-list").childElementCount + " Restaurant found";
+
+  } else {
+
+    document.querySelector("#restaurantFound").innerHTML = document.querySelector("#restaurants-list").childElementCount + " Restaurants found";
+  }
+
   addMarkersToMap();
 }
 
@@ -169,6 +185,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute('tabindex',0);
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -177,6 +194,7 @@ createRestaurantHTML = (restaurant) => {
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.setAttribute('tabindex',0);
   li.append(address);
 
   const more = document.createElement('a');
@@ -213,3 +231,8 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+document.querySelector("#neighborhoods-select").addEventListener('change', ()=>
+  document.querySelector("#restaurantFound").focus())
+
+document.querySelector("#cuisines-select").addEventListener('change', ()=>
+  document.querySelector("#restaurantFound").focus())
