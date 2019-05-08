@@ -2,12 +2,21 @@
 <html lang="en">
 
 <head>
+
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+
   <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+
   <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
   <title>Restaurant Reviews</title>
+
 </head>
 
 <body>
@@ -31,23 +40,31 @@
       </section>
 
       <div id="filter" class="filter-options">
-        <h2 tabindex="-1">Filter Results</h2>
+        <h2 tabindex="-1">Filter Menu</h2>
 
-        <label for="neighborhoods-select"> Select a Neighborhood</label>
+        <div class="option-container">
 
-        <select id="neighborhoods-select" name="neighborhoods" role="listbox"
-        aria-label="neighborhoods-select" onchange="updateRestaurants()">
+          <label class="filter-label" for="neighborhoods-select"> Select a Neighborhood</label>
+
+          <select id="neighborhoods-select" name="neighborhoods" role="listbox"
+          aria-label="neighborhoods-select" onchange="updateRestaurants()">
 
           <option value="all">All Neighborhoods</option>
-        </select>
+          </select>
 
-        <label for="cuisines-select"> Select a Neighborhood</label>
+        </div>
 
-        <select id="cuisines-select" name="cuisines" aria-label= "cuisines-select" role="listbox" onchange="updateRestaurants()">
+        <div class="option-container">
 
-        <option value="all">All Cuisines</option>
+          <label class="filter-label" for="cuisines-select"> Select a Cuisine</label>
 
-        </select>
+          <select id="cuisines-select" name="cuisines" aria-label= "cuisines-select" role="listbox" onchange="updateRestaurants()">
+
+          <option value="all">All Cuisines</option>
+
+          </select>
+
+        </div>
 
       </div>
 
