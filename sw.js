@@ -14,7 +14,6 @@ if('serviceWorker' in navigator) {
 }
 
 // Listens for service worker installation and add resources to cache
-// TODO: The number of resources to load (although done async) takes a toll on the loading of the webapge
 
 self.addEventListener('install',function(event){
 
@@ -50,7 +49,6 @@ self.addEventListener('install',function(event){
 });
 
 // Listens for all fetch events and always retrieves information from cache
-// TODO: Only retrieve info from cache when offline
 
 self.addEventListener('fetch', function(event) {
 	console.log('Caught request for ' + event.request.url);
