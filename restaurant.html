@@ -38,7 +38,7 @@ Viewport definition added for web responsiveness -->
     <!-- Beginning breadcrumb -->
 
     <div>
-      <ul id="breadcrumb" >
+      <ul id="breadcrumb" role="navigation" aria-label="breadcrumb">
         <li><a href="/" tabindex="0">Home</a></li>
       </ul>
     </div>
@@ -59,7 +59,7 @@ Viewport definition added for web responsiveness -->
 
     <div class="restaurantinfo">
           <section id="restaurant-container">
-      <h1 id="restaurant-name" tabindex="0"></h1>
+      <header id="restaurant-name" tabindex="0"></header>
       <img id="restaurant-img" tabindex="0">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address" tabindex="0"></p>
@@ -76,8 +76,8 @@ Viewport definition added for web responsiveness -->
     </div>
 
         <!-- Beginning map -->
-    <section id="map-container">
-      <div id="map" tabindex="0"></div>
+    <section class="inside" id="map-container">
+      <div id="map" aria-label="location" role="application" tabindex="0"></div>
     </section>
     <!-- End map -->
   </main>

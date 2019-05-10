@@ -128,7 +128,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('header');
   title.setAttribute('tabindex',0);
   title.setAttribute('role','heading');
   title.setAttribute('aria-level',2);
