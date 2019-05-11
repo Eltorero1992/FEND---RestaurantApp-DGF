@@ -15,7 +15,7 @@ body,td,th,p{
 body,html {
 	background-color: #fdfdfd;
   padding: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 	position:relative;
 }
@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
+  font-size:
 }
 #maincontent {
   background-color: #f3f3f3;
@@ -108,7 +109,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  height: 100%;
   max-width: 100%;
   background-color: #ccc;
 }
@@ -234,6 +235,7 @@ nav h1 a {
   height: 100%;
   width: 100%;
 }
+
 .inside #footer {
   bottom: 0;
   position: absolute;
@@ -363,6 +365,14 @@ nav h1 a {
     font-size: 18pt;
   }
 
+  .inside #map{
+    height: 400px;
+  }
+
+  #map {
+    height: 400px;
+  }
+
 }
 
 
@@ -395,12 +405,21 @@ nav h1 a {
     width: 50%;
   }
 
+  .inside{
+    max-width: 50%;
+    max-height: 100%;
+  }
+
   #map-container{
-    width: 50%;
+    width: 100%;
+  }
+
+  .inside #map {
+    height: 100%;
   }
 
   #map{
-    height: 100%;
+    height: 400px;
   }
 
   #restaurant-container, #reviews-container {
@@ -439,11 +458,21 @@ nav h1 a {
     width: 50%;
   }
 
+  .inside{
+    max-width: 50%;
+    max-height: 100%;
+  }
+
+
   #map-container{
-    width: 50%;
+    width: 100%;
   }
 
   #map{
+    height: 400px;
+  }
+
+  .inside #map-container{
     height: 100%;
   }
 
